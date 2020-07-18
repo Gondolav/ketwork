@@ -1,2 +1,3 @@
+include ':ketwork'
 include ':app'
 rootProject.name = "Ketwork"
