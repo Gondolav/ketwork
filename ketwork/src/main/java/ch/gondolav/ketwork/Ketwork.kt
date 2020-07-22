@@ -31,7 +31,7 @@ fun Context.isInternetConnectionOn(): Boolean {
  *
  * @param builder a lambda specifying the blocks to execute based on Internet connectivity
  */
-fun Context.runOnConnection(builder: ConnectionListener.() -> Unit) {
+inline fun Context.runOnConnection(crossinline builder: ConnectionListener.() -> Unit) {
     val listener = ConnectionListener().apply(builder)
     if (!isInternetConnectionOn()) {
         listener.off()
@@ -45,7 +45,7 @@ fun Context.runOnConnection(builder: ConnectionListener.() -> Unit) {
  *
  * @param block the block to execute if the connection is on
  */
-fun Context.runIfConnected(block: () -> Unit) {
+inline fun Context.runIfConnected(crossinline block: () -> Unit) {
     if (isInternetConnectionOn()) {
         block()
     }
@@ -56,7 +56,7 @@ fun Context.runIfConnected(block: () -> Unit) {
  *
  * @param block the block to execute if the connection is off
  */
-fun Context.runIfDisconnected(block: () -> Unit) {
+inline fun Context.runIfDisconnected(crossinline block: () -> Unit) {
     if (!isInternetConnectionOn()) {
         block()
     }

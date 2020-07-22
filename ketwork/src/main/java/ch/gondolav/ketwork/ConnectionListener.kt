@@ -3,10 +3,12 @@ package ch.gondolav.ketwork
 /**
  * A listener used to specify the actions to perform on Internet connection on/off.
  */
-class ConnectionListener internal constructor() {
+class ConnectionListener @PublishedApi internal constructor() {
 
-    var off: () -> Unit = {}
-    var on: () -> Unit = {}
+    @PublishedApi
+    internal var off: () -> Unit = {}
+    @PublishedApi
+    internal var on: () -> Unit = {}
 
     /**
      * Block to run on Internet connection off.
