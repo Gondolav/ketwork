@@ -36,7 +36,7 @@ runOnConnection {
     on {
         // download something from the web
     }
-    
+
     off {
         // show error popup
     }
@@ -56,6 +56,8 @@ runIfDisconnected {
 ```
 
 Of course, you can also just check for connectivity with `isInternetConnectionOn()`.
+
+Remember to add in your app manifest the *ACCESS_NETWORK_STATE* permission, required to check for connectivity.
 
 ## License
 
