@@ -20,7 +20,7 @@ Then, add the code below to your **module**'s `build.gradle` file.
 
 ```gradle
 dependencies {
-    implementation 'com.github.Gondolav:ketwork:1.1.1'
+    implementation 'com.github.Gondolav:ketwork:1.1.2'
 }
 ```
 
